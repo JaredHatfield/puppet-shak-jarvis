@@ -1,7 +1,7 @@
 
 class shak-jarvis(
   $app_file,
-  $java_path
+  $java_path,
   $awsaccesskey,
   $awssecretkey,
   $queueurl,
