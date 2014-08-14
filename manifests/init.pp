@@ -9,7 +9,7 @@ class shak-jarvis(
   $dbuser,
   $dbpassword) {
 
-  jsvc::deamon { 'jarvis-shak':
+  class { 'jsvc::deamon':
     jsvc_name       => 'jarvis-shak',
     jsvc_class_path => "/etc/jarvis-shak/shak-jarvis.jar",
     jsvc_class      => "com.unitvectory.shak.jarvis.App",
