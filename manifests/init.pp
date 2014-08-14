@@ -7,13 +7,15 @@ class shak-jarvis(
   $queueurl,
   $dburl,
   $dbuser,
-  $dbpassword) {
+  $dbpassword,
+  $ensure = running) {
 
   class { 'jsvc::deamon':
     jsvc_name       => 'shak-jarvis',
     jsvc_class_path => "/etc/shak-jarvis/shak-jarvis.jar",
     jsvc_class      => "com.unitvectory.shak.jarvis.App",
     jsvc_java_home  => $java_path,
+    ensure          =>  $ensure,
   }
 
   file { "/etc/shak-jarvis/shak-jarvis.jar":
