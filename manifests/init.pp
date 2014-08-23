@@ -8,6 +8,7 @@ class shak-jarvis(
   $dburl,
   $dbuser,
   $dbpassword,
+  $pushover = "",
   $ensure = running) {
 
   jsvc::deamon { 'shak-jarvis':
