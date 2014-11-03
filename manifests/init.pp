@@ -9,7 +9,7 @@ class shak-jarvis(
   $dbuser,
   $dbpassword,
   $pushover = "",
-  $ensure = running) {
+  $ensure = true) {
 
   jsvc::deamon { 'shak-jarvis':
     jsvc_name       => 'shak-jarvis',
